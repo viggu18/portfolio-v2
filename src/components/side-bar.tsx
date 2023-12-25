@@ -47,7 +47,7 @@ const TopbarItems = [
 
 const Sidebar = () => {
   return (
-    <div className="flex justify-between items-center flex-col h-full">
+    <div className=" flex justify-between items-center flex-col h-full">
       <div className="flex gap-5 flex-col">
         <Avatar className="mx-auto">
           <AvatarImage src="https://avatars.githubusercontent.com/u/20420550?v=4" />
@@ -70,7 +70,8 @@ const Sidebar = () => {
           </Link>
         ))}
       </div>
-      <div className="flex flex-col w-full items-center gap-2">
+
+      <div className="fixed bottom-4 flex flex-col items-center gap-2 w-fit">
         <Separator />
         <Link href="https://viggu18.vercel.app/">
           <Button
