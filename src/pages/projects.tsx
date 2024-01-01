@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Card,
   CardContent,
@@ -78,24 +78,27 @@ const PROJECTS = [
     skills: ["ReactJs", "Javascript", "HTML", "CSS"],
     description:
       "Small quiz app consiting of 4 questions. Wrote custom logic to calculate the score.",
-    url: "https://quiz-app-kappa-wheat.vercel.app/",
+    url: "https://viggu18.github.io/quiz-app",
     git: "https://github.com/viggu18/quiz-app",
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="w-full flex flex-col justify-center">
+    <div className="w-full flex flex-col justify-center" id="project">
       <Title>Projects</Title>
       <Carousel
         opts={{ dragFree: true, slidesToScroll: 1 }}
-        className="w-full max-w-[90%]"
+        className="w-full max-w-[100%]"
       >
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden md:block" />
+        <CarouselNext className="hidden md:block" />
         <CarouselContent>
           {PROJECTS.map((item, index) => (
-            <CarouselItem key={index} className="basis-1/4 flex">
+            <CarouselItem
+              key={index}
+              className="basis-1/1 md:basis-1/2 lg:basis-1/4 flex max-w-[300px]"
+            >
               <Card className="flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle className="text-md">{item.name}</CardTitle>
@@ -112,10 +115,10 @@ const Projects = () => {
                 </CardContent>
                 <CardContent className="flex gap-3">
                   <a href={item.git} target="_blank" rel="noreferrer">
-                    <Button variant="outline">Repo</Button>
+                    <Button variant="default">Repo</Button>
                   </a>
                   <a href={item.url} target="_blank" rel="noreferrer">
-                    <Button variant="outline">Preview</Button>
+                    <Button variant="default">Preview</Button>
                   </a>
                 </CardContent>
               </Card>

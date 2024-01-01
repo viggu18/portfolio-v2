@@ -27,10 +27,10 @@ const career = [
 ];
 const Career = () => {
   return (
-    <Fragment>
+    <div id="career">
       <Title>Career</Title>
 
-      <div className="flex gap-4 flex-col md:flex-row" id="career">
+      <div className="flex gap-4 flex-col md:flex-row">
         {career.map((item, idx) => (
           <Card key={idx} className="flex-1 max-w-[380px]">
             <CardHeader className="flex gap-4 items-center flex-row">
@@ -48,7 +48,7 @@ const Career = () => {
           </Card>
         ))}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

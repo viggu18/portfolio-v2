@@ -44,9 +44,9 @@ const skillSet = [
 
 const Skills = () => {
   return (
-    <Fragment>
+    <div id="skills">
       <Title>Skills</Title>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4" id="skills">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {skillSet.map((item, idx) => (
           <Card key={idx}>
             <CardHeader>
@@ -67,7 +67,7 @@ const Skills = () => {
           </Card>
         ))}
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ const App = () => {
       <div className="sticky top-4 h-[95svh] lg:h-[95vh] w-[12%]">
         <Sidebar />
       </div>
-      <div className="flex flex-col gap-5 w-[88%]">
+      <div className="flex flex-col gap-5 w-[88%] overflow-x-clip">
         <Topbar />
 
         <Career />

@@ -30,7 +30,7 @@ const TopbarItems = [
   },
   {
     label: "Projects",
-    ref: "",
+    ref: "#project",
     icon: <Presentation />,
   },
   {
