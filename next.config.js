@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["viggu18.vercel.app", "media.licdn.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "viggu18.vercel.app",
+      },
+      {
+        hostname: "media.licdn.com",
+      },
+    ],
   },
 };
 

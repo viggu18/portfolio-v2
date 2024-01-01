@@ -17,9 +17,9 @@ const App = () => {
       <div className="flex flex-col gap-5 w-[88%]">
         <Topbar />
 
-        <Projects />
         <Career />
         <Skills />
+        <Projects />
 
         <Contact />
       </div>

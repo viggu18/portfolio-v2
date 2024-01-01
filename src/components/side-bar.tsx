@@ -74,11 +74,7 @@ const Sidebar = () => {
       <div className="fixed bottom-4 flex flex-col items-center gap-2 w-fit">
         <Separator />
         <Link href="https://viggu18.vercel.app/">
-          <Button
-            className="bg-transperent border-0 w-full"
-            variant="outline"
-            size="icon"
-          >
+          <Button className="bg-transperent border-0 w-full" variant="outline">
             <LogOut />
           </Button>
         </Link>

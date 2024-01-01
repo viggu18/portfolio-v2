@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Card,
   CardContent,
@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import Title from "@/components/ui/title";
 
 const career = [
   {
@@ -26,22 +27,28 @@ const career = [
 ];
 const Career = () => {
   return (
-    <div className="flex gap-4 flex-col md:flex-row" id="career">
-      {career.map((item, idx) => (
-        <Card key={idx} className="flex-1 max-w-[380px]">
-          <CardHeader className="flex gap-4 items-center flex-row">
-            <Image src={item.logo} alt="company" width={40} height={60} />
-            <div className="">
-              <CardTitle className="text-md">{item.designation}</CardTitle>
-              <CardDescription className="text-xs">{item.name}</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-xs">{item.description}</p>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
+    <Fragment>
+      <Title>Career</Title>
+
+      <div className="flex gap-4 flex-col md:flex-row" id="career">
+        {career.map((item, idx) => (
+          <Card key={idx} className="flex-1 max-w-[380px]">
+            <CardHeader className="flex gap-4 items-center flex-row">
+              <Image src={item.logo} alt="company" width={40} height={60} />
+              <div className="">
+                <CardTitle className="text-md">{item.designation}</CardTitle>
+                <CardDescription className="text-xs">
+                  {item.name}
+                </CardDescription>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-xs">{item.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </Fragment>
   );
 };
 
