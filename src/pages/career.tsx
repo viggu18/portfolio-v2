@@ -15,7 +15,7 @@ const career = [
     name: "ZiniosEdge Software Limited",
     designation: "Associate Software Developer",
     description:
-      "Worked as Associate Software Engineer with a daily goal of building pixel perfect UI aimed to make a difference on hundreds of customers bringing their business online. Built many reusable UI components and wrote flaw proof logic for complex tasks.",
+      "Worked as Associate Software Engineer building a banking system based on crypto-currencies in an agile environment using Fireblocks and Kraken API. Took part in code reviews and single handedly built a system which handles all the transactions along with accounts and internal ledgers.",
   },
   {
     logo: "https://media.licdn.com/dms/image/D4E0BAQFgHXqXPKIvuA/company-logo_200_200/0/1666414916127/ordrio_logo?e=1711584000&v=beta&t=wyHsaklzLUoPpFkCPCPZwI0WyEhZlEUALgfstt6IG5s",
@@ -27,7 +27,7 @@ const career = [
 ];
 const Career = () => {
   return (
-    <div id="career">
+    <div id="career" className="snap-start">
       <Title>Career</Title>
 
       <div className="flex gap-4 flex-col md:flex-row">

@@ -14,8 +14,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+
 import Title from "@/components/ui/title";
 
 const PROJECTS = [
