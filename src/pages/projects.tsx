@@ -97,7 +97,7 @@ const Projects = () => {
           {PROJECTS.map((item, index) => (
             <CarouselItem
               key={index}
-              className="basis-1/1 md:basis-1/2 lg:basis-1/4 flex max-w-[300px]"
+              className="basis-1/1 md:basis-1/2 lg:basis-1/4 flex max-w-[300px] cursor-pointer"
             >
               <Card className="flex flex-col justify-between">
                 <CardHeader>
@@ -117,9 +117,11 @@ const Projects = () => {
                   <a href={item.git} target="_blank" rel="noreferrer">
                     <Button variant="default">Repo</Button>
                   </a>
-                  <a href={item.url} target="_blank" rel="noreferrer">
-                    <Button variant="default">Preview</Button>
-                  </a>
+                  {!!item.url && (
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      <Button variant="default">Preview</Button>
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             </CarouselItem>

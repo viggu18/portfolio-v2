@@ -27,12 +27,11 @@ const career = [
 ];
 const Career = () => {
   return (
-    <div id="career" className="snap-start">
+    <div id="career">
       <Title>Career</Title>
-
       <div className="flex gap-4 flex-col md:flex-row">
         {career.map((item, idx) => (
-          <Card key={idx} className="flex-1 max-w-[380px]">
+          <Card key={idx} className="flex-1 max-w-full md:max-w-[380px]">
             <CardHeader className="flex gap-4 items-center flex-row">
               <Image src={item.logo} alt="company" width={40} height={60} />
               <div className="">

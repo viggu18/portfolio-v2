@@ -1,31 +1,31 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
+import Link from "next/link";
+
 import { InstagramIcon, Linkedin, GithubIcon } from "lucide-react";
 import { Separator } from "./ui/separator";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import MobileSidebar from "./mobile-side-bar";
+import { ModeToggle } from "./mode-toggle";
 
 const Topbar = () => {
-  useEffect(() => {
-    console.log(window && document.body.scrollTop);
-  });
   return (
-    <div
-      className={cn(
-        document.body.scrollTop <= 50 ? "sticky top-0" : "",
-        "bg-background"
-      )}
-    >
-      <div className="flex gap-5 justify-end mt-2 mb-3">
-        <Link href="https://github.com/viggu18" target="_blank">
-          <GithubIcon />
-        </Link>
-        <Link href="https://www.linkedin.com/in/viggu18/" target="_blank">
-          <Linkedin />
-        </Link>
-        <Link href="https://www.instagram.com/vcn.o_o/" target="_blank">
-          <InstagramIcon />
-        </Link>
+    <div className={cn("bg-background flex flex-col w-full sticky top-0 z-50")}>
+      <div className="flex gap-5 justify-between md:justify-end mt-2 mb-3">
+        <div className="flex gap-4 items-center md:hidden">
+          <MobileSidebar />
+          <ModeToggle />
+        </div>
+        <div className="flex gap-5 items-center">
+          <Link href="https://github.com/viggu18" target="_blank">
+            <GithubIcon />
+          </Link>
+          <Link href="https://www.linkedin.com/in/viggu18/" target="_blank">
+            <Linkedin />
+          </Link>
+          <Link href="https://www.instagram.com/vcn.o_o/" target="_blank">
+            <InstagramIcon />
+          </Link>
+        </div>
       </div>
       <Separator />
     </div>
