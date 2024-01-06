@@ -9,8 +9,8 @@ import { ModeToggle } from "./mode-toggle";
 
 const Topbar = () => {
   return (
-    <div className={cn("bg-background flex flex-col w-full sticky top-0 z-50")}>
-      <div className="flex gap-5 justify-between md:justify-end mt-2 mb-3">
+    <div className={cn("bg-background flex flex-col w-full z-50")}>
+      <div className="flex gap-5 justify-between md:justify-end mb-3">
         <div className="flex gap-4 items-center md:hidden">
           <MobileSidebar />
           <ModeToggle />
